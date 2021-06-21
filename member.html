@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/cssreset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>香水</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="container d-flex justify-content-between align-items-center mgt-2">
+            <h1 class="logo"><a href="#">D’PERFUME</a>
+            </h1>
+
+            <ul class="nav">
+                <li><a href=""><i class="fas fa-store-alt ml-1 mr-1"></i>Product</a></li>
+                <li><a href=""><i class="fas fa-user ml-1 mr-1"></i>log in</a></li>
+                <li><a href=""><i class="fas fa-heart ml-1 mr-1"></i>Wishlist</a></li>
+                <li><a href=""><i class="fas fa-shopping-cart ml-1 mr-1"></i>Cart(3)</a></li>
+            </ul>
+        </div>
+
+        <div class="sec-menu">
+            <ul class="container d-flex">
+                <li><a href="#">CHANEL</a></li>
+                <li><a href="#">Jo Malone</a></li>
+                <li><a href="#">Curology</a></li>
+                <li><a href="#">Dior</a></li>
+                <li><a href="#">Chloe</a></li>
+                <li><a href="#">ZARA</a></li>
+            </ul>
+    
+        </div>
+        
+    </div>  
+    <!-- 以上共用 -->
+
+    <div class="container">
+        <div class=" d-flex mgy-2">
+            <div class="sidebar">
+                <p>會員中心</p>
+                <ul class="seidebar-list">
+                    <li><a href="#">會員資料修改</a></li>
+                    <li><a href="#">訂單查詢</a></li>
+                    <li><a href="#">退 / 換貨申請</a></li>
+                </ul>
+            </div>
+
+            <div class="member-main pdl-5 ">
+                <div class="memberMain-list">
+                    <p>個人資料修改</p>
+                    <ul class="list d-flex  pdb-5 ">
+                        <li class="left">會員帳號</li>
+                        <li class="right pdl-4"> email@example.com</li>
+                    </ul>
+
+                    <ul class="list d-flex  pdb-5">
+                        <li class="left">會員姓名</li>
+                        <li class="right pdl-4">
+                            <input type="text" class="memener-list  w3"  aria-describedby="button-addon2">
+                        </li>
+                    </ul>
+
+                    <ul class="list d-flex  pdb-5">
+                        <li class="left">會員性別</li>
+                        <li class="right pdl-4 w3">
+                            <select class="memener-list">
+                                <option>女</option>
+                                <option>男</option>
+                            </select>
+                        </li>
+                    </ul>
+
+                    <ul class="list d-flex  pdb-5">
+                        <li class="left">電子信箱</li>
+                        <li class="right pdl-4">
+                            <input type="text" class="memener-list w3 "  
+                            placeholder=" email@example.com"
+                            aria-describedby="button-addon2">
+                        </li>
+                    </ul>
+
+                    <ul class="list d-flex  pdb-5">
+                        <li class="left">手機號碼</li>
+                        <li class="right pdl-4">
+                            <input type="text" class="memener-list  w3"  
+                            aria-describedby="button-addon2">
+                        </li>
+                    </ul>
+
+                    <ul class="list d-flex  pdb-5">
+                        <li class="left">聯絡地址</li>
+                        <li class="right pdl-4 w3 flex-wrap">
+                            <select class="memener-list w1 mgb-1">
+                                <option>台灣</option>
+                                <option>離島</option>
+                            </select>
+
+                            <div class="selcet-group d-flex mgb-1">
+                                <select class="memener-list w1 mgb-1">
+                                    <option>高雄市</option>
+                                </select>
+    
+                                <select class="memener-list w1 ml-2">
+                                    <option>鹽埕區</option>
+                                </select>
+                            </div>
+                            
+                            <div class="member-check">
+                                <input type="checkbox" class="checkbox" id="c1" name="cc" />
+                                <label class="checkbox-label" for="c1"><span></span>我願意收到最新情報</label>
+                            </div>
+  
+                        </li>
+
+                    </ul>
+
+                    <ul class="list d-flex  pdb-5">
+                        <li class="left">配送地址</li>
+                        <li class="right pdl-4 w3 flex-wrap">
+                            <select class="memener-list w1 mgb-1">
+                                <option>台灣</option>
+                                <option>離島</option>
+                            </select>
+
+                            <div class="selcet-group d-flex mgb-1">
+                                <select class="memener-list w1 mgb-1">
+                                    <option>高雄市</option>
+                                </select>
+    
+                                <select class="memener-list w1 ml-2">
+                                    <option>鹽埕區</option>
+                                </select>
+                            </div>
+
+                            <input type="text" class="memener-list w3 mgb-2"  
+                            placeholder=" 請輸入地址"
+                            aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">確定修改</button>
+                        </li>
+
+                    </ul>
+
+                    
+                    
+                </div>
+
+                <div class="memberMain-list">
+                    <p>修改密碼</p>
+                    <ul class="list d-flex  pdb-5 ">
+                        <li class="left">舊密碼</li>
+                        <li class="right pdl-4">
+                            <input type="text" class="memener-list  w3"  aria-describedby="button-addon2">
+                        </li>
+                    </ul>
+                    
+                    <ul class="list d-flex  pdb-5 ">
+                        <li class="left">新密碼</li>
+                        <li class="right pdl-4">
+                            <input type="text" class="memener-list  w3"  aria-describedby="button-addon2">
+                        </li>
+                    </ul>
+
+                    <ul class="list d-flex  pdb-5 ">
+                        <li class="left">確認密碼</li>
+                        <li class="right pdl-4 w3">
+                            <input type="text" class="memener-list w3 mgb-2 "
+                            aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary " type="button" id="button-addon2">變更密碼</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="member-id pdl-3">
+                <i class="fas fa-user"></i>會員編碼<span>T00020080615</span>
+                <div >
+                    <ul class="idList d-flex">
+                        <li class="idList-r">購物車</li>
+                        <li class="idList-l">56</li>
+                    </ul>
+
+                    <ul class="idList d-flex">
+                        <li class="idList-r">我的收藏</li>
+                        <li class="idList-l">23</li>
+                    </ul>
+
+                    <ul class="idList d-flex">
+                        <li class="idList-r">完成訂單</li>
+                        <li class="idList-l">8</li>
+                    </ul>
+
+                    <ul class="idList d-flex">
+                        <li class="idList-r">會員紅利</li>
+                        <li class="idList-l">2680</li>
+                    </ul>
+
+                    <div class="inv-code">
+                        <ul class="idList d-flex">
+                            <li class="idList-r">邀請碼</li>
+                            <li class="idList-l">TK2075</li>
+                        </ul>
+                        <p>新戶輸入邀請碼即可獲贈紅利點數1000點</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <!-- 以下共用 -->
+    <div class="fotter ">
+        <div class="container d-flex justify-content-between">
+            <ul class="logo d-flex align-items-center">
+                <li><a href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/d%E2%80%99Perfumewhite.png" alt="品牌名稱"></a></li>
+                <li class="copyright pdl-2">© 2020. All Rights Reserved.</li>
+            </ul>
+            <ul class="menu d-flex align-items-center">
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,621 @@
+//@mixin
+
+@mixin text-hidden {
+    display:block;
+    text-indent:101%; //首行縮排
+    overflow:hidden; //自動隱藏超出的文字或圖片
+    white-space:nowrap; //希望元素在第一排上面，沒有斷行
+}
+
+@mixin fz($color,$fs){
+    color: $color;
+    font-size: $fs;
+    line-height: $fs * 1.5;
+}
+
+@mixin bgc($color){
+    max-width: 100%;
+    background: ($color);
+}
+
+/* 共用 */
+
+//padding
+.pdl-1{
+    padding-left: 29px;
+}
+
+.pdl-2{
+    padding-left: 20px;
+}
+
+.pdl-3{
+    padding-left: 36px;
+}
+
+.pdl-4{
+    padding-left: 42px;
+}
+
+.pdl-5{
+    padding-left: 93px;
+}
+
+
+
+.pdb-2{
+    padding-bottom: 16px;
+}
+
+.pdb-3{
+    padding-bottom: 58px;
+}
+
+.pdb-4{
+    padding-bottom: 80px;
+}
+
+.pdb-5{
+    padding-bottom: 20px;
+}
+
+.pdy-1{
+    padding: 40px 0;
+}
+
+.pdy-2{
+    padding: 30px 0;
+}
+
+.pdt-1{
+    padding-top: 312px;
+}
+
+.pdt-2{
+    padding-top: 20px;
+}
+
+.pdt-3{
+    padding-top: 32px;
+}
+
+.pdt-4{
+    padding-top: 53px;
+}
+
+
+//margin
+
+.ml-1{
+    margin-left: 32px;
+}
+
+.ml-2{
+    margin-left: 11px;
+}
+.mr-1{
+    margin-right: 3px;
+}
+
+.mgt-1{
+    margin-top: 29px;
+}
+.mgt-2{
+    margin-top: 9px;
+}
+
+.mgy-1{
+    margin: 60px 0;
+}
+
+.mgy-2{
+    margin: 80px 0;
+}
+
+.mgb-1{
+    margin-bottom: 8px;
+}
+
+.mgb-2{
+    margin-bottom: 16px;
+}
+
+//寬度
+.w1{
+    width: 160px;
+}
+
+.w2{
+    width: 190px;
+}
+
+.w3{
+    width: 350px;
+}
+
+
+
+//按鈕
+.btn-outline-secondary{
+    @include fz(white,$fs-s);
+    font-weight: 500;
+    border: 1px solid $brown;
+    background: $brown;
+    font-family: $cnft;
+    &:hover{
+        background: $brown-dark; 
+    }
+}
+
+.btn-outline-third{
+    @include fz($brown,$fs-s);
+    font-weight: 500;
+    border: 1px solid $brown;
+    font-family: $cnft;
+    &:hover{
+        background: $brown;
+        color: white
+    }
+}
+
+
+
+//字型
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,800;0,900;1,700&family=Noto+Sans+TC:wght@100;300;500;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,800;0,900;1,700&display=swap');
+
+
+//開始
+body{
+    font-family: 'Playfair Display', serif,'Noto Sans TC', sans-serif;
+}
+
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 0;
+}
+
+
+// 蓋BS
+a{
+    text-decoration: none;
+}
+
+.row > * {
+    padding: 0 0;
+}
+
+ul, ol{
+    list-style-type: none;
+}
+
+/* header */
+.header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.header .logo{
+    @include text-hidden;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/d%E2%80%99Perfume.png) no-repeat;
+    width: 128px;
+    height: 38px;
+}
+
+.header .nav a{
+    @include fz($gray-3,$fs);
+    font-family: $cnft;
+    font-weight: 300;
+    &:hover{
+        color: $gray-2;
+    }
+}
+
+
+/* banner */
+.banner{
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/index1.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.banner-content{
+    width: 100%;
+    height: 870px;
+}
+.banner-info{
+    width: 445px;
+    text-align: left;
+}
+
+.banner h2{
+    @include fz(white,$fs-xl);
+}
+
+.banner a{
+    display: block;
+    width: 350px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background: #FFFFFF4D;
+    opacity: 1;
+    @include fz(white,$fs-m-l);
+    &:hover{
+        color: white;
+    }
+}
+
+.banner p{
+    @include fz(white,$fs-m-s);
+}
+
+/* 產品 */
+.info,
+.info-content  {
+    width: 350px;
+}
+
+.list-s .col-6{
+    height: 555px;
+    overflow: hidden;
+}
+
+.list-s .pic{
+    max-width: 100%;
+}
+
+.list-s .c5{
+    max-height: 100%
+}
+
+.link{
+    @include fz($golden,$fs-s);
+    font-weight: 700;
+}
+
+.info h3{
+    @include fz(black,$fs-l-s);
+    font: $enft;
+    font-weight: 900;
+}
+
+.info P{
+    @include fz(black,$fs-m);
+    font-weight: 300;
+}
+
+.list-l .col-6{
+    height: 1080px;
+    overflow: hidden;
+}
+
+.list-l .col-6 img{
+    max-height: 100%;
+    position: relative;
+    right: 50px;
+}
+
+.list-l h4{
+    @include fz(black,$fs-m-s);
+    font-weight: 900;
+}
+
+.list-l P{
+    @include fz(black,$fs);
+    font-weight: 300;
+    font-family: $cnft;
+    padding-bottom: 52px;
+    letter-spacing: 0px;
+}
+
+.list-l a{
+    display: block;
+    width: 350px;
+    border: 2px solid black;
+    border-radius: 50px;
+    background: #FFFFFF4D;
+    opacity: 1;
+    text-align: center;
+    @include fz(black,$fs-m);
+    font-weight: 700;
+    &:hover{
+    background: rgba(0, 0, 0, 0.1)
+    }
+}
+//sec 產品區
+
+.sec-product{
+    background-color: $gray-2;
+}
+
+
+.sec-product-list .pic{
+    display: block;
+    width: 350px;
+    height: 540px;
+    overflow: hidden;
+}
+
+.pic img{
+    max-height: 100%;
+}
+
+.category{
+    @include fz(black,$fs-m);
+    font-weight: 900;
+    font-family: $cnft;
+}
+
+.name, .price{
+    @include fz(black,$fs-s);
+    font-family: $cnft;
+    font-weight: 100;
+}
+
+.price span{
+    @include fz($gray-3,$fs-s);
+    font-family: $cnft;
+    text-decoration: line-through;
+}
+
+//3rd
+
+.third-product .pic{
+    width: 730px;
+    height: 520px;
+    overflow: hidden;
+}
+
+.third-product .pic img{
+    max-width: 100%;
+    background-size: cover;
+}
+
+.third-product h4{
+    @include fz(black,$fs-m-s);
+    font-weight: 900;
+}
+
+.third-product P{
+    @include fz(black,$fs);
+    font-weight: 300;
+    font-family: $cnft;
+    padding-bottom: 52px;
+    letter-spacing: 0px;
+}
+
+
+//fotter
+.fotter-sub{
+    width: 100%;
+    height: 600px;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/index10.jpg)  no-repeat;
+    background-size: cover;
+    background-position: 50% 45%;
+}
+
+.fotter-sub p{
+    @include fz($gray-3,$fs-l-s);
+    font-weight: 900;
+}
+
+.form-control,
+.number-control{
+    @include fz($gray-3,$fs);
+    font-weight: 500;
+    border: 2px solid $brown;
+    font-family: $cnft;
+    text-align: center;
+}
+
+.fotter .input{
+    border: 5px solid $brown;
+}
+
+.fotter{
+    @include bgc($brown);
+
+}
+
+
+.fotter .copyright{
+    @include fz(white,$fs);
+    font-family: $cnft;
+}
+
+.fotter .menu a{
+    @include fz(white,$fs);
+    font-family: $cnft;
+    padding-left: 36px;
+    font-weight: 300;
+}
+
+//pg-product
+.sec-menu{
+    @include bgc($brown);
+}
+    
+.sec-menu a{
+    display: block;
+    @include fz(white,$fs-s);
+    font-family: $cnft;
+    font-weight: 100;
+    padding: 7px 28px 7px 0;
+}
+
+//
+
+.main .pic{
+    width: 255px;
+    height:255px;
+    overflow: hidden;
+}
+.main img{
+    max-height: 400px;
+    background-size: cover;
+}
+
+.porduct-list a{
+    color: $golden;
+}
+
+.page-list .page{
+    @include fz(black,$fs-m);
+    font-family: $cnft;
+    font-weight: 100;
+    padding-left: 20px;
+}
+
+.page-list .page-now{
+    @include fz(black,$fs-m);
+    font-family: $cnft;
+    font-weight: 100;
+    padding-left: 20px;
+    color: $golden;
+    text-decoration: underline;
+
+}
+
+
+//CHANEL N°5
+
+.porduct-main .pic{
+    width: 730px;
+    overflow: hidden;
+}
+
+.porduct-main .pic-s li{
+    width: 350px;
+    overflow: hidden;
+}
+
+.porduct-main .pic img{
+    max-width: 100%;
+}
+
+.porduct-price{
+    @include fz(black,$fs-m);
+    font-weight: 300;
+    font-family: $cnft;
+}
+
+.collect{
+    color: $brown;
+    &:hover{
+        color: $brown-dark;
+    }
+}
+
+.collect span{
+    @include fz(black,$fs-s);
+    font-weight: 300;
+    font-family: $cnft;
+}
+
+.sale-list .thin{
+    @include fz(black,$fs-s);
+    font-weight: 300;
+    font-family: $cnft;
+}
+
+.sale-list .bold{
+    @include fz(black,$fs-s);
+    font-weight: 700;
+    font-family: $cnft;
+}
+
+//log in
+.login-info {
+    width: 350px;
+    @include fz(black,$fs);
+    font-family: $cnft;
+}
+
+.login-info h3{
+    @include fz(black,$fs-l-s);
+    font: $enft;
+    font-weight: 900;
+}
+
+.login-control{
+    width: 350px;
+    @include fz($gray-3,$fs);
+    font-weight: 300;
+    border: 2px solid $gray-2;
+    font-family: $cnft;
+}
+
+//member
+
+.sidebar{
+    width: 100px;
+}
+
+.sidebar p{
+    @include fz($gray-3,$fs-m);
+    padding-bottom: 28px;
+    font-weight: 500;
+}
+
+.sidebar a{
+    display: block;
+    @include fz($gray-3,$fs-s);
+    margin-bottom: 24px;
+    font-weight: 900;
+    &:hover{
+        border-bottom: 5px solid $golden;
+    }
+}
+
+
+.member-main {
+    color: $gray-3;
+    font-family: $cnft;
+    font-weight: 300;
+    width: 635px;
+}
+
+.memberMain-list P{
+    @include fz(black,$fs);
+    font-weight: 700;
+    border-bottom: 1px solid $gray-4;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+}
+
+.memener-list{
+    height: 38px;
+    @include fz($gray-3,$fs);
+    font-weight: 300;
+    border: 2px solid $gray-2;
+    font-family: $cnft;
+}
+
+.left{
+    width: 64px;
+}
+
+.member-id{
+    @include fz($gray-4,$fs-s);
+    font-weight: 500;
+    font-family: $cnft;
+    span{
+        font-weight: 500;
+    }
+    p{
+        @include fz($gray-3,$fs);
+        font-weight: 300;
+        
+    }
+}
+
+.idList{
+    padding-top: 16px;
+}
+.idList-r{
+    width: 64px;
+}
+
+.idList-l{
+    padding-left: 31px;
+}
