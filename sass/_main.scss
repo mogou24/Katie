@@ -1,3 +1,4 @@
+
 //@mixin
 
 @mixin text-hidden {
@@ -85,6 +86,7 @@
 
 
 //margin
+
 
 .ml-1{
     margin-left: 32px;
@@ -189,6 +191,8 @@ ul, ol{
     list-style-type: none;
 }
 
+
+
 /* header */
 .header{
     position: sticky;
@@ -199,14 +203,18 @@ ul, ol{
 .header .logo{
     @include text-hidden;
     background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/d%E2%80%99Perfume.png) no-repeat;
-    width: 128px;
-    height: 38px;
+    a{
+     display: block;
+     height: 38px;
+     width: 178px;
+    }
 }
 
 .header .nav a{
     @include fz($gray-3,$fs);
     font-family: $cnft;
     font-weight: 300;
+    padding: 10px 0;
     &:hover{
         color: $gray-2;
     }
@@ -234,7 +242,7 @@ ul, ol{
 
 .banner a{
     display: block;
-    width: 350px;
+    // width: 350px;
     border: 2px solid white;
     border-radius: 50px;
     background: #FFFFFF4D;
@@ -255,13 +263,12 @@ ul, ol{
     width: 350px;
 }
 
-.list-s .col-6{
+.top-product .list-s {
     height: 555px;
     overflow: hidden;
-}
-
-.list-s .pic{
-    max-width: 100%;
+    img{
+        max-width: 100%;
+    }
 }
 
 .list-s .c5{
@@ -273,34 +280,33 @@ ul, ol{
     font-weight: 700;
 }
 
-.info h3{
+.info .topTitle{
     @include fz(black,$fs-l-s);
     font: $enft;
     font-weight: 900;
 }
 
-.info P{
+.info .cw{
     @include fz(black,$fs-m);
     font-weight: 300;
 }
 
-.list-l .col-6{
+.top-product .list-l{
     height: 1080px;
     overflow: hidden;
+    img{
+        object-fit: cover;
+        max-height: 100%;
+    }
 }
 
-.list-l .col-6 img{
-    max-height: 100%;
-    position: relative;
-    right: 50px;
-}
 
-.list-l h4{
+.list-l-info h4{
     @include fz(black,$fs-m-s);
     font-weight: 900;
 }
 
-.list-l P{
+.list-l-info P{
     @include fz(black,$fs);
     font-weight: 300;
     font-family: $cnft;
@@ -308,7 +314,7 @@ ul, ol{
     letter-spacing: 0px;
 }
 
-.list-l a{
+.list-l-link{
     display: block;
     width: 350px;
     border: 2px solid black;
@@ -328,17 +334,20 @@ ul, ol{
     background-color: $gray-2;
 }
 
+.sec-product li{
+    padding: 0 10px;
+}
 
 .sec-product-list .pic{
     display: block;
-    width: 350px;
     height: 540px;
     overflow: hidden;
+    img{
+        max-width: 100%;
+    }
 }
 
-.pic img{
-    max-height: 100%;
-}
+
 
 .category{
     @include fz(black,$fs-m);
@@ -356,14 +365,6 @@ ul, ol{
     @include fz($gray-3,$fs-s);
     font-family: $cnft;
     text-decoration: line-through;
-}
-
-//3rd
-
-.third-product .pic{
-    width: 730px;
-    height: 520px;
-    overflow: hidden;
 }
 
 .third-product .pic img{
@@ -446,13 +447,10 @@ ul, ol{
 //
 
 .main .pic{
-    width: 255px;
-    height:255px;
     overflow: hidden;
 }
 .main img{
-    max-height: 400px;
-    background-size: cover;
+    width: 100%;
 }
 
 .porduct-list a{
@@ -533,7 +531,7 @@ ul, ol{
 
 .login-info h3{
     @include fz(black,$fs-l-s);
-    font: $enft;
+    font-family: $enft;
     font-weight: 900;
 }
 
@@ -548,7 +546,7 @@ ul, ol{
 //member
 
 .sidebar{
-    width: 100px;
+    max-width: 100px;
 }
 
 .sidebar p{
@@ -573,6 +571,7 @@ ul, ol{
     font-family: $cnft;
     font-weight: 300;
     width: 635px;
+    padding-left: 93px;
 }
 
 .memberMain-list P{

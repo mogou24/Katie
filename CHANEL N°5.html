@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/cssreset.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>香水</title>
 </head>
@@ -13,18 +12,26 @@
 
     <div class="header">
         <div class="container d-flex justify-content-between align-items-center mgt-2">
-            <a href="index.html"> <h1 class="logo">D’PERFUME</h1></a>
+            <h1 class="logo"><a href="index.html">D’PERFUME</a></h1>
 
-            <ul class="nav">
+            <ul class="nav d-none d-lg-flex">
                 <li><a href="product.html"><i class="fas fa-store-alt ml-1 mr-1"></i>Product</a></li>
                 <li><a href="login.html"><i class="fas fa-user ml-1 mr-1"></i>log in</a></li>
                 <li><a href="CHANEL N°5.html"><i class="fas fa-heart ml-1 mr-1"></i>Wishlist</a></li>
                 <li><a href="member.html"><i class="fas fa-shopping-cart ml-1 mr-1"></i>Cart(3)</a></li>
             </ul>
+
+            <nav class="navbar navbar-light d-lg-none">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+              </nav>
         </div>
 
         <div class="sec-menu">
-            <ul class="container d-flex">
+            <ul class="container d-lg-flex d-none ">
                 <li><a href="#">CHANEL</a></li>
                 <li><a href="#">Jo Malone</a></li>
                 <li><a href="#">Curology</a></li>
@@ -34,10 +41,7 @@
             </ul>
     
         </div>
-        
     </div>
-    
-  
     <!-- 以上共用 -->
 
  
@@ -47,16 +51,16 @@
                 <div class="pic-l">
                     <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/product1.jpg" alt="產品圖片">
                 </div>
-                <ul class="pic-s d-flex pdy-2 justify-content-between">
+                <ul class="pic-s d-lg-flex d-none pdy-2 justify-content-between">
                     <li><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/product2.jpg" alt="產品圖片"></li>
                     <li ><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/product3.jpg" alt="產品圖片"></li>
                 </ul>
-                <div class="pic-l">
+                <div class="pic-l d-lg-flex d-none">
                     <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/product1.jpg" alt="產品圖片">
                 </div>
             </div>
 
-            <div class="info">
+            <div class="login-info">
                 <h3>CHANEL N°5</h3>
                 <p>N°5，女性魅力的極致精髓。散發柔美澄透的乙醛花束香氣。經典傳奇香氛，蘊藏於極簡設計的獨特瓶身。</p>
                 <p class="porduct-price pdt-3 pdb-2">NT$4,980</p>
@@ -78,19 +82,29 @@
     
                     </div>
                 </div>
+
+                <div class="pic">
+                    <ul class="pic-s d-lg-none d- pdy-2">
+                        <li><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/product2.jpg" alt="產品圖片"></li>
+                        <li ><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/product3.jpg" alt="產品圖片"></li>
+                        <li>
+                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/product1.jpg" alt="產品圖片">
+                        </li>
+                    </ul>
+                </div>
             </div>
 
         </div>
     </div>
 
-    <!-- 以下共用 -->  
-    <div class="fotter ">
+     <!-- 以下共用 -->  
+     <div class="fotter ">
         <div class="container d-flex justify-content-between">
-            <ul class="logo d-flex align-items-center">
-                <li><a href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/d%E2%80%99Perfumewhite.png" alt="品牌名稱"></a></li>
-                <li class="copyright pdl-2">© 2020. All Rights Reserved.</li>
-            </ul>
-            <ul class="menu d-flex align-items-center">
+            <div class="logo d-lg-flex align-items-center">
+                <a href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/d%E2%80%99Perfumewhite.png" alt="品牌名稱"></a>
+                <p class="copyright pdl-2">© 2020. All Rights Reserved.</p>
+            </div>
+            <ul class="menu d-flex align-items-center d-none">
                 <li><a href="#">Product</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>

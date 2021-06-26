@@ -11652,8 +11652,12 @@ ul, ol {
   overflow: hidden;
   white-space: nowrap;
   background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/perfume-week6/d%E2%80%99Perfume.png) no-repeat;
-  width: 128px;
+}
+
+.header .logo a {
+  display: block;
   height: 38px;
+  width: 178px;
 }
 
 .header .nav a {
@@ -11662,6 +11666,7 @@ ul, ol {
   line-height: 21px;
   font-family: "Noto Sans TC";
   font-weight: 300;
+  padding: 10px 0;
 }
 
 .header .nav a:hover {
@@ -11692,7 +11697,6 @@ ul, ol {
 
 .banner a {
   display: block;
-  width: 350px;
   border: 2px solid white;
   border-radius: 50px;
   background: #FFFFFF4D;
@@ -11718,12 +11722,12 @@ ul, ol {
   width: 350px;
 }
 
-.list-s .col-6 {
+.top-product .list-s {
   height: 555px;
   overflow: hidden;
 }
 
-.list-s .pic {
+.top-product .list-s img {
   max-width: 100%;
 }
 
@@ -11738,7 +11742,7 @@ ul, ol {
   font-weight: 700;
 }
 
-.info h3, .info .h3 {
+.info .topTitle {
   color: black;
   font-size: 32px;
   line-height: 48px;
@@ -11746,32 +11750,32 @@ ul, ol {
   font-weight: 900;
 }
 
-.info P {
+.info .cw {
   color: black;
   font-size: 20px;
   line-height: 30px;
   font-weight: 300;
 }
 
-.list-l .col-6 {
+.top-product .list-l {
   height: 1080px;
   overflow: hidden;
 }
 
-.list-l .col-6 img {
+.top-product .list-l img {
+  -o-object-fit: cover;
+     object-fit: cover;
   max-height: 100%;
-  position: relative;
-  right: 50px;
 }
 
-.list-l h4, .list-l .h4 {
+.list-l-info h4, .list-l-info .h4 {
   color: black;
   font-size: 24px;
   line-height: 36px;
   font-weight: 900;
 }
 
-.list-l P {
+.list-l-info P {
   color: black;
   font-size: 14px;
   line-height: 21px;
@@ -11781,7 +11785,7 @@ ul, ol {
   letter-spacing: 0px;
 }
 
-.list-l a {
+.list-l-link {
   display: block;
   width: 350px;
   border: 2px solid black;
@@ -11795,7 +11799,7 @@ ul, ol {
   font-weight: 700;
 }
 
-.list-l a:hover {
+.list-l-link:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 
@@ -11803,15 +11807,18 @@ ul, ol {
   background-color: #E0E0E0;
 }
 
+.sec-product li {
+  padding: 0 10px;
+}
+
 .sec-product-list .pic {
   display: block;
-  width: 350px;
   height: 540px;
   overflow: hidden;
 }
 
-.pic img {
-  max-height: 100%;
+.sec-product-list .pic img {
+  max-width: 100%;
 }
 
 .category {
@@ -11836,12 +11843,6 @@ ul, ol {
   line-height: 24px;
   font-family: "Noto Sans TC";
   text-decoration: line-through;
-}
-
-.third-product .pic {
-  width: 730px;
-  height: 520px;
-  overflow: hidden;
 }
 
 .third-product .pic img {
@@ -11933,13 +11934,11 @@ ul, ol {
 }
 
 .main .pic {
-  width: 255px;
-  height: 255px;
   overflow: hidden;
 }
 
 .main img {
-  max-height: 400px;
+  width: 100%;
   background-size: cover;
 }
 
@@ -12048,7 +12047,7 @@ ul, ol {
 }
 
 .sidebar {
-  width: 100px;
+  max-width: 100px;
 }
 
 .sidebar p {
@@ -12077,6 +12076,7 @@ ul, ol {
   font-family: "Noto Sans TC";
   font-weight: 300;
   width: 635px;
+  padding-left: 93px;
 }
 
 .memberMain-list P {
@@ -12132,5 +12132,76 @@ ul, ol {
 
 .idList-l {
   padding-left: 31px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 730px;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner h2, .banner .h2 {
+    color: white;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .banner p {
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .banner-info {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-product .pic {
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sec-product-list .pic {
+    height: 350px;
+  }
+  .sec-product-list .pic img {
+    max-width: 100%;
+    position: relative;
+    bottom: 320px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main .pic {
+    height: 255px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    max-width: 100%;
+  }
+  .member-main {
+    color: #8D8D8D;
+    font-family: "Noto Sans TC";
+    font-weight: 300;
+    max-width: 100%;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  .right {
+    width: 255px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .porduct-main .pic {
+    width: 100%;
+    overflow: hidden;
+  }
 }
 /*# sourceMappingURL=all.css.map */

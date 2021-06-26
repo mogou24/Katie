@@ -1,0 +1,78 @@
+//container
+@media screen and (max-width: 768px) {
+    .container{
+        max-width: 730px;
+        padding: 0 10px;
+    }
+    
+}
+
+//bn
+@media screen and (max-width: 768px) {
+    .banner h2{
+        @include fz(white,$fs-l-s);
+    }
+    .banner p{
+        @include fz(white,$fs-m);
+    }
+    .banner-info{
+        max-width: 600px;
+    }
+  
+}
+
+//TOP-產品
+@media screen and (max-width: 768px) {
+    .top-product .pic{
+        margin-top: 32px;
+    }
+}
+
+//sec
+@media screen and (max-width: 768px){
+    .sec-product-list .pic{
+        height: 350px;
+        img{
+            max-width: 100%;
+            position: relative;
+            bottom: 320px;
+        }
+    }
+}
+
+
+//page-product
+@media screen and (max-width: 768px){
+    .main{
+        .pic{
+            height:255px;
+            overflow: hidden;
+        }
+    }
+}
+
+//member
+@media screen and (max-width: 768px){
+    .sidebar{
+        max-width: 100%;
+    }
+    .member-main {
+        color: $gray-3;
+        font-family: $cnft;
+        font-weight: 300;
+        max-width: 100%;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    .right {
+        width: 255px;
+    }
+}
+
+//CHANEL N°5
+@media screen and (max-width: 768px){
+    .porduct-main .pic{
+        width: 100%;
+        overflow: hidden;
+    }
+}
